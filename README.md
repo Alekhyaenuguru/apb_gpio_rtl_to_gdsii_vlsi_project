@@ -141,3 +141,8 @@ Screenshots of each physical-design stage, generated from the ODB files in `phys
 
 ### Final layout (GDSII, viewed in KLayout)
 ![Final GDS layout](images/final_layout_gds.png)
+
+
+
+## Project Video
+https://drive.google.com/file/d/1eNLlKi2RSJSW8lob519OwSTwFQD5fyZu/view?usp=sharing
