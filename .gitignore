@@ -1,0 +1,41 @@
+# README backups
+README.md.bak
+README.md.pre_lvs_status_backup
+*.bak
+*.bak_*
+
+# compiled simulation binaries and scratch
+reports/apb_gpio_gate_sim
+*.vvp
+*.o
+*.swp
+*~
+
+# experiments / diagnostics, not deliverables
+physical_design/gds/*_test*
+physical_design/gds/*diagnostic*
+
+# compiled simulator outputs (regenerate from sources)
+sim/apb_gpio_compile
+sim/apb_gpio_rtl_sim
+sim/apb_gpio_sim
+sim/apb_gpio_gate_sim
+sim/apb_gpio_postroute_sim
+sim/tb_dff_check
+sim/tb_dfrtp_check
+sim/tb_udp_check
+
+# PDK copy (use the one from your PDK install)
+sim/sky130_fd_sc_hd_sim.v
+
+# experiments / scratch results
+physical_design/results/*_test*
+physical_design/gds/apb_gpio_orig_*
+physical_design/gds/apb_gpio_powerfix_*
+physical_design/lvs/*_test*
+physical_design/lvs/*diagnostic*
+physical_design/lvs/*.before_vnb_fix
+physical_design/lvs/lvs_consttest.log
+physical_design/lvs/lvs_deep_vgnd.log
+physical_design/lvs/lvs_powerfix_fresh.log
+physical_design/gds_out_powerfix_test.*

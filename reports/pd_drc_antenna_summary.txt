@@ -1,0 +1,4 @@
+224:[INFO DRT-0199]   Number of violations = 14.
+255:[INFO DRT-0199]   Number of violations = 0.
+307:[INFO ANT-0002] Found 0 net violations.
+308:[INFO ANT-0001] Found 0 pin violations.

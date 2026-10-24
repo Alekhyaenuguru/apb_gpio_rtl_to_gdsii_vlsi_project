@@ -1,0 +1,35 @@
+Startpoint: PADDR[2] (input port clocked by PCLK)
+Endpoint: PRDATA[4] (output port clocked by PCLK)
+Path Group: PCLK
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+            0.000    0.000    0.000   clock PCLK (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+                     2.000    2.000 v input external delay
+   0.002    0.000    0.000    2.000 v PADDR[2] (in)
+            0.000    0.000    2.000 v _062_/A (sky130_fd_sc_hd__buf_2)
+   0.022    0.053    0.116    2.116 v _062_/X (sky130_fd_sc_hd__buf_2)
+            0.053    0.000    2.116 v _063_/C (sky130_fd_sc_hd__nor4_4)
+   0.021    0.380    0.358    2.473 ^ _063_/Y (sky130_fd_sc_hd__nor4_4)
+            0.380    0.000    2.473 ^ _106_/A2 (sky130_fd_sc_hd__a22oi_1)
+   0.004    0.100    0.119    2.593 v _106_/Y (sky130_fd_sc_hd__a22oi_1)
+            0.100    0.000    2.593 v _107_/A2 (sky130_fd_sc_hd__a21oi_2)
+   0.000    0.048    0.123    2.716 ^ _107_/Y (sky130_fd_sc_hd__a21oi_2)
+            0.048    0.000    2.716 ^ PRDATA[4] (out)
+                              2.716   data arrival time
+
+            0.000   18.000   18.000   clock PCLK (rise edge)
+                     0.000   18.000   clock network delay (ideal)
+                    -0.200   17.800   clock uncertainty
+                     0.000   17.800   clock reconvergence pessimism
+                    -2.000   15.800   output external delay
+                             15.800   data required time
+---------------------------------------------------------------------------
+                             15.800   data required time
+                             -2.716   data arrival time
+---------------------------------------------------------------------------
+                             13.084   slack (MET)
+
+

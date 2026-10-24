@@ -1,0 +1,391 @@
+* APB GPIO LVS reference subcircuit
+.subckt apb_gpio PCLK PENABLE PREADY PRESETn PSEL PWRITE PSLVERR PADDR.2 PADDR.3 PADDR.4 PADDR.5 PWDATA.0 PWDATA.1 PWDATA.2 PWDATA.3 PWDATA.4 PWDATA.5 PWDATA.6 PWDATA.7 PRDATA.0 PRDATA.1 PRDATA.2 PRDATA.3 PRDATA.4 PRDATA.5 PRDATA.6 PRDATA.7 PRDATA.8 PRDATA.9 PRDATA.10 PRDATA.11 PRDATA.12 PRDATA.13 PRDATA.14 PRDATA.15 PRDATA.16 PRDATA.17 PRDATA.18 PRDATA.19 PRDATA.20 PRDATA.21 PRDATA.22 PRDATA.23 PRDATA.24 PRDATA.25 PRDATA.26 PRDATA.27 PRDATA.28 PRDATA.29 PRDATA.30 PRDATA.31 gpio_in.0 gpio_in.1 gpio_in.2 gpio_in.3 gpio_in.4 gpio_in.5 gpio_in.6 gpio_in.7 gpio_out.0 gpio_out.1 gpio_out.2 gpio_out.3 gpio_out.4 gpio_out.5 gpio_out.6 gpio_out.7 gpio_oe.0 gpio_oe.1 gpio_oe.2 gpio_oe.3 gpio_oe.4 gpio_oe.5 gpio_oe.6 gpio_oe.7
+X0 clknet_0_PCLK _NC0 _NC1 _NC2 _NC3 clknet_1_1__leaf_PCLK sky130_fd_sc_hd__clkbuf_16
+X1 clknet_0_PCLK _NC4 _NC5 _NC6 _NC7 clknet_1_0__leaf_PCLK sky130_fd_sc_hd__clkbuf_16
+X2 PCLK _NC8 _NC9 _NC10 _NC11 clknet_0_PCLK sky130_fd_sc_hd__clkbuf_16
+X3 clknet_1_1__leaf_PCLK _015_ PRESETn _NC12 _NC13 _NC14 _NC15 gpio_out.7 sky130_fd_sc_hd__dfrtp_1
+X4 clknet_1_0__leaf_PCLK _000_ PRESETn _NC16 _NC17 _NC18 _NC19 gpio_out.6 sky130_fd_sc_hd__dfrtp_1
+X5 clknet_1_1__leaf_PCLK _001_ PRESETn _NC20 _NC21 _NC22 _NC23 gpio_out.5 sky130_fd_sc_hd__dfrtp_1
+X6 clknet_1_1__leaf_PCLK _002_ PRESETn _NC24 _NC25 _NC26 _NC27 gpio_out.4 sky130_fd_sc_hd__dfrtp_1
+X7 clknet_1_0__leaf_PCLK _003_ PRESETn _NC28 _NC29 _NC30 _NC31 gpio_out.3 sky130_fd_sc_hd__dfrtp_1
+X8 clknet_1_1__leaf_PCLK _004_ PRESETn _NC32 _NC33 _NC34 _NC35 gpio_out.2 sky130_fd_sc_hd__dfrtp_1
+X9 clknet_1_0__leaf_PCLK _005_ PRESETn _NC36 _NC37 _NC38 _NC39 gpio_out.1 sky130_fd_sc_hd__dfrtp_1
+X10 clknet_1_0__leaf_PCLK _006_ PRESETn _NC40 _NC41 _NC42 _NC43 gpio_out.0 sky130_fd_sc_hd__dfrtp_1
+X11 clknet_1_1__leaf_PCLK _014_ PRESETn _NC44 _NC45 _NC46 _NC47 gpio_oe.7 sky130_fd_sc_hd__dfrtp_1
+X12 clknet_1_0__leaf_PCLK _007_ PRESETn _NC48 _NC49 _NC50 _NC51 gpio_oe.6 sky130_fd_sc_hd__dfrtp_1
+X13 clknet_1_1__leaf_PCLK _008_ PRESETn _NC52 _NC53 _NC54 _NC55 gpio_oe.5 sky130_fd_sc_hd__dfrtp_1
+X14 clknet_1_1__leaf_PCLK _009_ PRESETn _NC56 _NC57 _NC58 _NC59 gpio_oe.4 sky130_fd_sc_hd__dfrtp_1
+X15 clknet_1_0__leaf_PCLK _010_ PRESETn _NC60 _NC61 _NC62 _NC63 gpio_oe.3 sky130_fd_sc_hd__dfrtp_1
+X16 clknet_1_1__leaf_PCLK _011_ PRESETn _NC64 _NC65 _NC66 _NC67 gpio_oe.2 sky130_fd_sc_hd__dfrtp_1
+X17 clknet_1_0__leaf_PCLK _012_ PRESETn _NC68 _NC69 _NC70 _NC71 gpio_oe.1 sky130_fd_sc_hd__dfrtp_1
+X18 clknet_1_0__leaf_PCLK _013_ PRESETn _NC72 _NC73 _NC74 _NC75 gpio_oe.0 sky130_fd_sc_hd__dfrtp_1
+X19 _052_ _NC76 _NC77 _NC78 _NC79 _015_ sky130_fd_sc_hd__buf_6
+X20 gpio_out.7 PWDATA.7 _057_ _NC80 _NC81 _NC82 _NC83 _052_ sky130_fd_sc_hd__mux2_4
+X21 _051_ _NC84 _NC85 _NC86 _NC87 _014_ sky130_fd_sc_hd__buf_4
+X22 gpio_oe.7 PWDATA.7 _043_ _NC88 _NC89 _NC90 _NC91 _051_ sky130_fd_sc_hd__mux2_1
+X23 _050_ _NC92 _NC93 _NC94 _NC95 _013_ sky130_fd_sc_hd__buf_4
+X24 gpio_oe.0 PWDATA.0 _043_ _NC96 _NC97 _NC98 _NC99 _050_ sky130_fd_sc_hd__mux2_1
+X25 _049_ _NC100 _NC101 _NC102 _NC103 _012_ sky130_fd_sc_hd__buf_4
+X26 gpio_oe.1 PWDATA.1 _043_ _NC104 _NC105 _NC106 _NC107 _049_ sky130_fd_sc_hd__mux2_1
+X27 _048_ _NC108 _NC109 _NC110 _NC111 _011_ sky130_fd_sc_hd__buf_4
+X28 gpio_oe.2 PWDATA.2 _043_ _NC112 _NC113 _NC114 _NC115 _048_ sky130_fd_sc_hd__mux2_1
+X29 _047_ _NC116 _NC117 _NC118 _NC119 _010_ sky130_fd_sc_hd__buf_4
+X30 gpio_oe.3 PWDATA.3 _043_ _NC120 _NC121 _NC122 _NC123 _047_ sky130_fd_sc_hd__mux2_1
+X31 _046_ _NC124 _NC125 _NC126 _NC127 _009_ sky130_fd_sc_hd__buf_4
+X32 gpio_oe.4 PWDATA.4 _043_ _NC128 _NC129 _NC130 _NC131 _046_ sky130_fd_sc_hd__mux2_1
+X33 _045_ _NC132 _NC133 _NC134 _NC135 _008_ sky130_fd_sc_hd__buf_4
+X34 gpio_oe.5 PWDATA.5 _043_ _NC136 _NC137 _NC138 _NC139 _045_ sky130_fd_sc_hd__mux2_1
+X35 _044_ _NC140 _NC141 _NC142 _NC143 _007_ sky130_fd_sc_hd__buf_4
+X36 gpio_oe.6 PWDATA.6 _043_ _NC144 _NC145 _NC146 _NC147 _044_ sky130_fd_sc_hd__mux2_1
+X37 _042_ _NC148 _NC149 _NC150 _NC151 _043_ sky130_fd_sc_hd__buf_4
+X38 _053_ _027_ _NC152 _NC153 _NC154 _NC155 _042_ sky130_fd_sc_hd__nor2b_1
+X39 _040_ _041_ _022_ _NC156 _NC157 _NC158 _NC159 PRDATA.0 sky130_fd_sc_hd__a21oi_2
+X40 gpio_out.0 _055_ _027_ gpio_oe.0 _NC160 _NC161 _NC162 _NC163 _041_ sky130_fd_sc_hd__a22oi_1
+X41 gpio_in.0 _054_ _024_ _NC164 _NC165 _NC166 _NC167 _040_ sky130_fd_sc_hd__o21ai_0
+X42 _038_ _039_ _022_ _NC168 _NC169 _NC170 _NC171 PRDATA.1 sky130_fd_sc_hd__a21oi_2
+X43 gpio_out.1 _055_ _027_ gpio_oe.1 _NC172 _NC173 _NC174 _NC175 _039_ sky130_fd_sc_hd__a22oi_1
+X44 gpio_in.1 _054_ _024_ _NC176 _NC177 _NC178 _NC179 _038_ sky130_fd_sc_hd__o21ai_0
+X45 _036_ _037_ _022_ _NC180 _NC181 _NC182 _NC183 PRDATA.2 sky130_fd_sc_hd__a21oi_2
+X46 gpio_out.2 _055_ _027_ gpio_oe.2 _NC184 _NC185 _NC186 _NC187 _037_ sky130_fd_sc_hd__a22oi_1
+X47 gpio_in.2 _054_ _024_ _NC188 _NC189 _NC190 _NC191 _036_ sky130_fd_sc_hd__o21ai_0
+X48 _034_ _035_ _022_ _NC192 _NC193 _NC194 _NC195 PRDATA.3 sky130_fd_sc_hd__a21oi_2
+X49 gpio_out.3 _055_ _027_ gpio_oe.3 _NC196 _NC197 _NC198 _NC199 _035_ sky130_fd_sc_hd__a22oi_1
+X50 gpio_in.3 _054_ _024_ _NC200 _NC201 _NC202 _NC203 _034_ sky130_fd_sc_hd__o21ai_0
+X51 _032_ _033_ _022_ _NC204 _NC205 _NC206 _NC207 PRDATA.4 sky130_fd_sc_hd__a21oi_2
+X52 gpio_out.4 _055_ _026_ gpio_in.4 _NC208 _NC209 _NC210 _NC211 _033_ sky130_fd_sc_hd__a22oi_1
+X53 gpio_oe.4 _027_ _NC212 _NC213 _NC214 _NC215 _032_ sky130_fd_sc_hd__nand2_1
+X54 _023_ _031_ _NC216 _NC217 _NC218 _NC219 PRDATA.5 sky130_fd_sc_hd__nor2_2
+X55 gpio_in.5 _026_ _027_ gpio_oe.5 gpio_out.5 _055_ _NC220 _NC221 _NC222 _NC223 _031_ sky130_fd_sc_hd__a222oi_1
+X56 _029_ _030_ _022_ _NC224 _NC225 _NC226 _NC227 PRDATA.6 sky130_fd_sc_hd__a21oi_2
+X57 gpio_out.6 _055_ _027_ gpio_oe.6 _NC228 _NC229 _NC230 _NC231 _030_ sky130_fd_sc_hd__a22oi_1
+X58 gpio_in.6 _054_ _024_ _NC232 _NC233 _NC234 _NC235 _029_ sky130_fd_sc_hd__o21ai_0
+X59 _023_ _028_ _NC236 _NC237 _NC238 _NC239 PRDATA.7 sky130_fd_sc_hd__nor2_2
+X60 gpio_in.7 _026_ _027_ gpio_oe.7 gpio_out.7 _055_ _NC240 _NC241 _NC242 _NC243 _028_ sky130_fd_sc_hd__a222oi_1
+X61 PADDR.4 PADDR.5 PADDR.3 _054_ _NC244 _NC245 _NC246 _NC247 _027_ sky130_fd_sc_hd__nor4b_4
+X62 PADDR.4 PADDR.5 _054_ PADDR.3 _NC248 _NC249 _NC250 _NC251 _026_ sky130_fd_sc_hd__nor4b_1
+X63 _022_ _025_ _NC252 _NC253 _NC254 _NC255 PRDATA.8 sky130_fd_sc_hd__nor2_2
+X64 _023_ _025_ _NC256 _NC257 _NC258 _NC259 PRDATA.11 sky130_fd_sc_hd__nor2_2
+X65 _023_ _025_ _NC260 _NC261 _NC262 _NC263 PRDATA.14 sky130_fd_sc_hd__nor2_2
+X66 _023_ _025_ _NC264 _NC265 _NC266 _NC267 PRDATA.20 sky130_fd_sc_hd__nor2_2
+X67 _023_ _025_ _NC268 _NC269 _NC270 _NC271 PRDATA.22 sky130_fd_sc_hd__nor2_2
+X68 _023_ _025_ _NC272 _NC273 _NC274 _NC275 PRDATA.24 sky130_fd_sc_hd__nor2_2
+X69 _023_ _025_ _NC276 _NC277 _NC278 _NC279 PRDATA.25 sky130_fd_sc_hd__nor2_2
+X70 _023_ _025_ _NC280 _NC281 _NC282 _NC283 PRDATA.26 sky130_fd_sc_hd__nor2_2
+X71 _023_ _025_ _NC284 _NC285 _NC286 _NC287 PRDATA.30 sky130_fd_sc_hd__nor2_2
+X72 _054_ _024_ _NC288 _NC289 _NC290 _NC291 _025_ sky130_fd_sc_hd__nand2_1
+X73 PADDR.4 PADDR.5 PADDR.3 _NC292 _NC293 _NC294 _NC295 _024_ sky130_fd_sc_hd__nor3b_2
+X74 _022_ _NC296 _NC297 _NC298 _NC299 _023_ sky130_fd_sc_hd__buf_2
+X75 _021_ _NC300 _NC301 _NC302 _NC303 _022_ sky130_fd_sc_hd__buf_2
+X76 PWRITE PREADY _NC304 _NC305 _NC306 _NC307 _021_ sky130_fd_sc_hd__nand2b_1
+X77 _020_ _NC308 _NC309 _NC310 _NC311 PREADY sky130_fd_sc_hd__buf_2
+X78 PSEL PENABLE _NC312 _NC313 _NC314 _NC315 _020_ sky130_fd_sc_hd__and2_1
+X79 _019_ _NC316 _NC317 _NC318 _NC319 _006_ sky130_fd_sc_hd__buf_6
+X80 gpio_out.0 PWDATA.0 _057_ _NC320 _NC321 _NC322 _NC323 _019_ sky130_fd_sc_hd__mux2_4
+X81 _018_ _NC324 _NC325 _NC326 _NC327 _005_ sky130_fd_sc_hd__buf_6
+X82 gpio_out.1 PWDATA.1 _057_ _NC328 _NC329 _NC330 _NC331 _018_ sky130_fd_sc_hd__mux2_4
+X83 _017_ _NC332 _NC333 _NC334 _NC335 _004_ sky130_fd_sc_hd__buf_6
+X84 gpio_out.2 PWDATA.2 _057_ _NC336 _NC337 _NC338 _NC339 _017_ sky130_fd_sc_hd__mux2_4
+X85 _016_ _NC340 _NC341 _NC342 _NC343 _003_ sky130_fd_sc_hd__buf_6
+X86 gpio_out.3 PWDATA.3 _057_ _NC344 _NC345 _NC346 _NC347 _016_ sky130_fd_sc_hd__mux2_4
+X87 _060_ _NC348 _NC349 _NC350 _NC351 _002_ sky130_fd_sc_hd__buf_6
+X88 gpio_out.4 PWDATA.4 _057_ _NC352 _NC353 _NC354 _NC355 _060_ sky130_fd_sc_hd__mux2_4
+X89 _059_ _NC356 _NC357 _NC358 _NC359 _001_ sky130_fd_sc_hd__buf_6
+X90 gpio_out.5 PWDATA.5 _057_ _NC360 _NC361 _NC362 _NC363 _059_ sky130_fd_sc_hd__mux2_4
+X91 _058_ _NC364 _NC365 _NC366 _NC367 _000_ sky130_fd_sc_hd__buf_6
+X92 gpio_out.6 PWDATA.6 _057_ _NC368 _NC369 _NC370 _NC371 _058_ sky130_fd_sc_hd__mux2_4
+X93 _056_ _NC372 _NC373 _NC374 _NC375 _057_ sky130_fd_sc_hd__buf_6
+X94 _053_ _055_ _NC376 _NC377 _NC378 _NC379 _056_ sky130_fd_sc_hd__and2b_1
+X95 PADDR.4 PADDR.5 _054_ PADDR.3 _NC380 _NC381 _NC382 _NC383 _055_ sky130_fd_sc_hd__nor4_4
+X96 PADDR.2 _NC384 _NC385 _NC386 _NC387 _054_ sky130_fd_sc_hd__buf_2
+X97 PSEL PENABLE PWRITE _NC388 _NC389 _NC390 _NC391 _053_ sky130_fd_sc_hd__nand3_1
+X98 _NC392 _NC393 _NC394 _NC395 _NC396 zero_ sky130_fd_sc_hd__conb_1
+X99 _NC397 _NC398 sky130_fd_sc_hd__tapvpwrvgnd_1
+X100 _NC399 _NC400 sky130_fd_sc_hd__tapvpwrvgnd_1
+X101 _NC401 _NC402 sky130_fd_sc_hd__tapvpwrvgnd_1
+X102 _NC403 _NC404 sky130_fd_sc_hd__tapvpwrvgnd_1
+X103 _NC405 _NC406 sky130_fd_sc_hd__tapvpwrvgnd_1
+X104 _NC407 _NC408 sky130_fd_sc_hd__tapvpwrvgnd_1
+X105 _NC409 _NC410 sky130_fd_sc_hd__tapvpwrvgnd_1
+X106 _NC411 _NC412 sky130_fd_sc_hd__tapvpwrvgnd_1
+X107 _NC413 _NC414 sky130_fd_sc_hd__tapvpwrvgnd_1
+X108 _NC415 _NC416 sky130_fd_sc_hd__tapvpwrvgnd_1
+X109 _NC417 _NC418 sky130_fd_sc_hd__tapvpwrvgnd_1
+X110 _NC419 _NC420 sky130_fd_sc_hd__tapvpwrvgnd_1
+X111 _NC421 _NC422 sky130_fd_sc_hd__tapvpwrvgnd_1
+X112 _NC423 _NC424 sky130_fd_sc_hd__tapvpwrvgnd_1
+X113 _NC425 _NC426 sky130_fd_sc_hd__tapvpwrvgnd_1
+X114 _NC427 _NC428 sky130_fd_sc_hd__tapvpwrvgnd_1
+X115 _NC429 _NC430 sky130_fd_sc_hd__tapvpwrvgnd_1
+X116 _NC431 _NC432 sky130_fd_sc_hd__tapvpwrvgnd_1
+X117 _NC433 _NC434 sky130_fd_sc_hd__tapvpwrvgnd_1
+X118 _NC435 _NC436 sky130_fd_sc_hd__tapvpwrvgnd_1
+X119 _NC437 _NC438 sky130_fd_sc_hd__tapvpwrvgnd_1
+X120 _NC439 _NC440 sky130_fd_sc_hd__tapvpwrvgnd_1
+X121 _NC441 _NC442 sky130_fd_sc_hd__tapvpwrvgnd_1
+X122 _NC443 _NC444 sky130_fd_sc_hd__tapvpwrvgnd_1
+X123 _NC445 _NC446 sky130_fd_sc_hd__tapvpwrvgnd_1
+X124 _NC447 _NC448 sky130_fd_sc_hd__tapvpwrvgnd_1
+X125 _NC449 _NC450 sky130_fd_sc_hd__tapvpwrvgnd_1
+X126 _NC451 _NC452 sky130_fd_sc_hd__tapvpwrvgnd_1
+X127 _NC453 _NC454 sky130_fd_sc_hd__tapvpwrvgnd_1
+X128 _NC455 _NC456 sky130_fd_sc_hd__tapvpwrvgnd_1
+X129 _NC457 _NC458 sky130_fd_sc_hd__tapvpwrvgnd_1
+X130 _NC459 _NC460 _NC461 _NC462 sky130_fd_sc_hd__fill_2
+X131 _NC463 _NC464 _NC465 _NC466 sky130_fd_sc_hd__fill_4
+X132 _NC467 _NC468 _NC469 _NC470 sky130_fd_sc_hd__fill_1
+X133 _NC471 _NC472 _NC473 _NC474 sky130_fd_sc_hd__fill_8
+X134 _NC475 _NC476 _NC477 _NC478 sky130_fd_sc_hd__fill_1
+X135 _NC479 _NC480 _NC481 _NC482 sky130_fd_sc_hd__fill_4
+X136 _NC483 _NC484 _NC485 _NC486 sky130_fd_sc_hd__fill_8
+X137 _NC487 _NC488 _NC489 _NC490 sky130_fd_sc_hd__fill_8
+X138 _NC491 _NC492 _NC493 _NC494 sky130_fd_sc_hd__fill_8
+X139 _NC495 _NC496 _NC497 _NC498 sky130_fd_sc_hd__fill_1
+X140 _NC499 _NC500 _NC501 _NC502 sky130_fd_sc_hd__fill_2
+X141 _NC503 _NC504 _NC505 _NC506 sky130_fd_sc_hd__fill_1
+X142 _NC507 _NC508 _NC509 _NC510 sky130_fd_sc_hd__fill_2
+X143 _NC511 _NC512 _NC513 _NC514 sky130_fd_sc_hd__fill_4
+X144 _NC515 _NC516 _NC517 _NC518 sky130_fd_sc_hd__fill_8
+X145 _NC519 _NC520 _NC521 _NC522 sky130_fd_sc_hd__fill_8
+X146 _NC523 _NC524 _NC525 _NC526 sky130_fd_sc_hd__fill_8
+X147 _NC527 _NC528 _NC529 _NC530 sky130_fd_sc_hd__fill_2
+X148 _NC531 _NC532 _NC533 _NC534 sky130_fd_sc_hd__fill_8
+X149 _NC535 _NC536 _NC537 _NC538 sky130_fd_sc_hd__fill_8
+X150 _NC539 _NC540 _NC541 _NC542 sky130_fd_sc_hd__fill_2
+X151 _NC543 _NC544 _NC545 _NC546 sky130_fd_sc_hd__fill_4
+X152 _NC547 _NC548 _NC549 _NC550 sky130_fd_sc_hd__fill_8
+X153 _NC551 _NC552 _NC553 _NC554 sky130_fd_sc_hd__fill_1
+X154 _NC555 _NC556 _NC557 _NC558 sky130_fd_sc_hd__fill_8
+X155 _NC559 _NC560 _NC561 _NC562 sky130_fd_sc_hd__fill_8
+X156 _NC563 _NC564 _NC565 _NC566 sky130_fd_sc_hd__fill_2
+X157 _NC567 _NC568 _NC569 _NC570 sky130_fd_sc_hd__fill_8
+X158 _NC571 _NC572 _NC573 _NC574 sky130_fd_sc_hd__fill_8
+X159 _NC575 _NC576 _NC577 _NC578 sky130_fd_sc_hd__fill_1
+X160 _NC579 _NC580 _NC581 _NC582 sky130_fd_sc_hd__fill_8
+X161 _NC583 _NC584 _NC585 _NC586 sky130_fd_sc_hd__fill_8
+X162 _NC587 _NC588 _NC589 _NC590 sky130_fd_sc_hd__fill_8
+X163 _NC591 _NC592 _NC593 _NC594 sky130_fd_sc_hd__fill_1
+X164 _NC595 _NC596 _NC597 _NC598 sky130_fd_sc_hd__fill_4
+X165 _NC599 _NC600 _NC601 _NC602 sky130_fd_sc_hd__fill_1
+X166 _NC603 _NC604 _NC605 _NC606 sky130_fd_sc_hd__fill_8
+X167 _NC607 _NC608 _NC609 _NC610 sky130_fd_sc_hd__fill_1
+X168 _NC611 _NC612 _NC613 _NC614 sky130_fd_sc_hd__fill_2
+X169 _NC615 _NC616 _NC617 _NC618 sky130_fd_sc_hd__fill_8
+X170 _NC619 _NC620 _NC621 _NC622 sky130_fd_sc_hd__fill_4
+X171 _NC623 _NC624 _NC625 _NC626 sky130_fd_sc_hd__fill_8
+X172 _NC627 _NC628 _NC629 _NC630 sky130_fd_sc_hd__fill_8
+X173 _NC631 _NC632 _NC633 _NC634 sky130_fd_sc_hd__fill_8
+X174 _NC635 _NC636 _NC637 _NC638 sky130_fd_sc_hd__fill_8
+X175 _NC639 _NC640 _NC641 _NC642 sky130_fd_sc_hd__fill_8
+X176 _NC643 _NC644 _NC645 _NC646 sky130_fd_sc_hd__fill_4
+X177 _NC647 _NC648 _NC649 _NC650 sky130_fd_sc_hd__fill_4
+X178 _NC651 _NC652 _NC653 _NC654 sky130_fd_sc_hd__fill_2
+X179 _NC655 _NC656 _NC657 _NC658 sky130_fd_sc_hd__fill_8
+X180 _NC659 _NC660 _NC661 _NC662 sky130_fd_sc_hd__fill_2
+X181 _NC663 _NC664 _NC665 _NC666 sky130_fd_sc_hd__fill_4
+X182 _NC667 _NC668 _NC669 _NC670 sky130_fd_sc_hd__fill_1
+X183 _NC671 _NC672 _NC673 _NC674 sky130_fd_sc_hd__fill_8
+X184 _NC675 _NC676 _NC677 _NC678 sky130_fd_sc_hd__fill_1
+X185 _NC679 _NC680 _NC681 _NC682 sky130_fd_sc_hd__fill_2
+X186 _NC683 _NC684 _NC685 _NC686 sky130_fd_sc_hd__fill_8
+X187 _NC687 _NC688 _NC689 _NC690 sky130_fd_sc_hd__fill_8
+X188 _NC691 _NC692 _NC693 _NC694 sky130_fd_sc_hd__fill_1
+X189 _NC695 _NC696 _NC697 _NC698 sky130_fd_sc_hd__fill_1
+X190 _NC699 _NC700 _NC701 _NC702 sky130_fd_sc_hd__fill_8
+X191 _NC703 _NC704 _NC705 _NC706 sky130_fd_sc_hd__fill_2
+X192 _NC707 _NC708 _NC709 _NC710 sky130_fd_sc_hd__fill_8
+X193 _NC711 _NC712 _NC713 _NC714 sky130_fd_sc_hd__fill_8
+X194 _NC715 _NC716 _NC717 _NC718 sky130_fd_sc_hd__fill_8
+X195 _NC719 _NC720 _NC721 _NC722 sky130_fd_sc_hd__fill_1
+X196 _NC723 _NC724 _NC725 _NC726 sky130_fd_sc_hd__fill_1
+X197 _NC727 _NC728 _NC729 _NC730 sky130_fd_sc_hd__fill_4
+X198 _NC731 _NC732 _NC733 _NC734 sky130_fd_sc_hd__fill_2
+X199 _NC735 _NC736 _NC737 _NC738 sky130_fd_sc_hd__fill_8
+X200 _NC739 _NC740 _NC741 _NC742 sky130_fd_sc_hd__fill_8
+X201 _NC743 _NC744 _NC745 _NC746 sky130_fd_sc_hd__fill_4
+X202 _NC747 _NC748 _NC749 _NC750 sky130_fd_sc_hd__fill_8
+X203 _NC751 _NC752 _NC753 _NC754 sky130_fd_sc_hd__fill_8
+X204 _NC755 _NC756 _NC757 _NC758 sky130_fd_sc_hd__fill_2
+X205 _NC759 _NC760 _NC761 _NC762 sky130_fd_sc_hd__fill_4
+X206 _NC763 _NC764 _NC765 _NC766 sky130_fd_sc_hd__fill_1
+X207 _NC767 _NC768 _NC769 _NC770 sky130_fd_sc_hd__fill_2
+X208 _NC771 _NC772 _NC773 _NC774 sky130_fd_sc_hd__fill_2
+X209 _NC775 _NC776 _NC777 _NC778 sky130_fd_sc_hd__fill_1
+X210 _NC779 _NC780 _NC781 _NC782 sky130_fd_sc_hd__fill_1
+X211 _NC783 _NC784 _NC785 _NC786 sky130_fd_sc_hd__fill_4
+X212 _NC787 _NC788 _NC789 _NC790 sky130_fd_sc_hd__fill_8
+X213 _NC791 _NC792 _NC793 _NC794 sky130_fd_sc_hd__fill_4
+X214 _NC795 _NC796 _NC797 _NC798 sky130_fd_sc_hd__fill_1
+X215 _NC799 _NC800 _NC801 _NC802 sky130_fd_sc_hd__fill_2
+X216 _NC803 _NC804 _NC805 _NC806 sky130_fd_sc_hd__fill_1
+X217 _NC807 _NC808 _NC809 _NC810 sky130_fd_sc_hd__fill_2
+X218 _NC811 _NC812 _NC813 _NC814 sky130_fd_sc_hd__fill_4
+X219 _NC815 _NC816 _NC817 _NC818 sky130_fd_sc_hd__fill_4
+X220 _NC819 _NC820 _NC821 _NC822 sky130_fd_sc_hd__fill_8
+X221 _NC823 _NC824 _NC825 _NC826 sky130_fd_sc_hd__fill_4
+X222 _NC827 _NC828 _NC829 _NC830 sky130_fd_sc_hd__fill_2
+X223 _NC831 _NC832 _NC833 _NC834 sky130_fd_sc_hd__fill_8
+X224 _NC835 _NC836 _NC837 _NC838 sky130_fd_sc_hd__fill_8
+X225 _NC839 _NC840 _NC841 _NC842 sky130_fd_sc_hd__fill_2
+X226 _NC843 _NC844 _NC845 _NC846 sky130_fd_sc_hd__fill_1
+X227 _NC847 _NC848 _NC849 _NC850 sky130_fd_sc_hd__fill_2
+X228 _NC851 _NC852 _NC853 _NC854 sky130_fd_sc_hd__fill_8
+X229 _NC855 _NC856 _NC857 _NC858 sky130_fd_sc_hd__fill_8
+X230 _NC859 _NC860 _NC861 _NC862 sky130_fd_sc_hd__fill_8
+X231 _NC863 _NC864 _NC865 _NC866 sky130_fd_sc_hd__fill_8
+X232 _NC867 _NC868 _NC869 _NC870 sky130_fd_sc_hd__fill_2
+X233 _NC871 _NC872 _NC873 _NC874 sky130_fd_sc_hd__fill_4
+X234 _NC875 _NC876 _NC877 _NC878 sky130_fd_sc_hd__fill_1
+X235 _NC879 _NC880 _NC881 _NC882 sky130_fd_sc_hd__fill_2
+X236 _NC883 _NC884 _NC885 _NC886 sky130_fd_sc_hd__fill_2
+X237 _NC887 _NC888 _NC889 _NC890 sky130_fd_sc_hd__fill_4
+X238 _NC891 _NC892 _NC893 _NC894 sky130_fd_sc_hd__fill_2
+X239 _NC895 _NC896 _NC897 _NC898 sky130_fd_sc_hd__fill_1
+X240 _NC899 _NC900 _NC901 _NC902 sky130_fd_sc_hd__fill_2
+X241 _NC903 _NC904 _NC905 _NC906 sky130_fd_sc_hd__fill_4
+X242 _NC907 _NC908 _NC909 _NC910 sky130_fd_sc_hd__fill_4
+X243 _NC911 _NC912 _NC913 _NC914 sky130_fd_sc_hd__fill_8
+X244 _NC915 _NC916 _NC917 _NC918 sky130_fd_sc_hd__fill_8
+X245 _NC919 _NC920 _NC921 _NC922 sky130_fd_sc_hd__fill_1
+X246 _NC923 _NC924 _NC925 _NC926 sky130_fd_sc_hd__fill_2
+X247 _NC927 _NC928 _NC929 _NC930 sky130_fd_sc_hd__fill_1
+X248 _NC931 _NC932 _NC933 _NC934 sky130_fd_sc_hd__fill_2
+X249 _NC935 _NC936 _NC937 _NC938 sky130_fd_sc_hd__fill_4
+X250 _NC939 _NC940 _NC941 _NC942 sky130_fd_sc_hd__fill_2
+X251 _NC943 _NC944 _NC945 _NC946 sky130_fd_sc_hd__fill_8
+X252 _NC947 _NC948 _NC949 _NC950 sky130_fd_sc_hd__fill_8
+X253 _NC951 _NC952 _NC953 _NC954 sky130_fd_sc_hd__fill_8
+X254 _NC955 _NC956 _NC957 _NC958 sky130_fd_sc_hd__fill_8
+X255 _NC959 _NC960 _NC961 _NC962 sky130_fd_sc_hd__fill_1
+X256 _NC963 _NC964 _NC965 _NC966 sky130_fd_sc_hd__fill_4
+X257 _NC967 _NC968 _NC969 _NC970 sky130_fd_sc_hd__fill_8
+X258 _NC971 _NC972 _NC973 _NC974 sky130_fd_sc_hd__fill_8
+X259 _NC975 _NC976 _NC977 _NC978 sky130_fd_sc_hd__fill_8
+X260 _NC979 _NC980 _NC981 _NC982 sky130_fd_sc_hd__fill_8
+X261 _NC983 _NC984 _NC985 _NC986 sky130_fd_sc_hd__fill_1
+X262 _NC987 _NC988 _NC989 _NC990 sky130_fd_sc_hd__fill_1
+X263 _NC991 _NC992 _NC993 _NC994 sky130_fd_sc_hd__fill_1
+X264 _NC995 _NC996 _NC997 _NC998 sky130_fd_sc_hd__fill_8
+X265 _NC999 _NC1000 _NC1001 _NC1002 sky130_fd_sc_hd__fill_8
+X266 _NC1003 _NC1004 _NC1005 _NC1006 sky130_fd_sc_hd__fill_2
+X267 _NC1007 _NC1008 _NC1009 _NC1010 sky130_fd_sc_hd__fill_4
+X268 _NC1011 _NC1012 _NC1013 _NC1014 sky130_fd_sc_hd__fill_8
+X269 _NC1015 _NC1016 _NC1017 _NC1018 sky130_fd_sc_hd__fill_1
+X270 _NC1019 _NC1020 _NC1021 _NC1022 sky130_fd_sc_hd__fill_2
+X271 _NC1023 _NC1024 _NC1025 _NC1026 sky130_fd_sc_hd__fill_4
+X272 _NC1027 _NC1028 _NC1029 _NC1030 sky130_fd_sc_hd__fill_8
+X273 _NC1031 _NC1032 _NC1033 _NC1034 sky130_fd_sc_hd__fill_8
+X274 _NC1035 _NC1036 _NC1037 _NC1038 sky130_fd_sc_hd__fill_8
+X275 _NC1039 _NC1040 _NC1041 _NC1042 sky130_fd_sc_hd__fill_8
+X276 _NC1043 _NC1044 _NC1045 _NC1046 sky130_fd_sc_hd__fill_1
+X277 _NC1047 _NC1048 _NC1049 _NC1050 sky130_fd_sc_hd__fill_2
+X278 _NC1051 _NC1052 _NC1053 _NC1054 sky130_fd_sc_hd__fill_2
+X279 _NC1055 _NC1056 _NC1057 _NC1058 sky130_fd_sc_hd__fill_1
+X280 _NC1059 _NC1060 _NC1061 _NC1062 sky130_fd_sc_hd__fill_4
+X281 _NC1063 _NC1064 _NC1065 _NC1066 sky130_fd_sc_hd__fill_1
+X282 _NC1067 _NC1068 _NC1069 _NC1070 sky130_fd_sc_hd__fill_2
+X283 _NC1071 _NC1072 _NC1073 _NC1074 sky130_fd_sc_hd__fill_8
+X284 _NC1075 _NC1076 _NC1077 _NC1078 sky130_fd_sc_hd__fill_8
+X285 _NC1079 _NC1080 _NC1081 _NC1082 sky130_fd_sc_hd__fill_8
+X286 _NC1083 _NC1084 _NC1085 _NC1086 sky130_fd_sc_hd__fill_8
+X287 _NC1087 _NC1088 _NC1089 _NC1090 sky130_fd_sc_hd__fill_4
+X288 _NC1091 _NC1092 _NC1093 _NC1094 sky130_fd_sc_hd__fill_1
+X289 _NC1095 _NC1096 _NC1097 _NC1098 sky130_fd_sc_hd__fill_8
+X290 _NC1099 _NC1100 _NC1101 _NC1102 sky130_fd_sc_hd__fill_1
+X291 _NC1103 _NC1104 _NC1105 _NC1106 sky130_fd_sc_hd__fill_8
+X292 _NC1107 _NC1108 _NC1109 _NC1110 sky130_fd_sc_hd__fill_1
+X293 _NC1111 _NC1112 _NC1113 _NC1114 sky130_fd_sc_hd__fill_2
+X294 _NC1115 _NC1116 _NC1117 _NC1118 sky130_fd_sc_hd__fill_4
+X295 _NC1119 _NC1120 _NC1121 _NC1122 sky130_fd_sc_hd__fill_8
+X296 _NC1123 _NC1124 _NC1125 _NC1126 sky130_fd_sc_hd__fill_8
+X297 _NC1127 _NC1128 _NC1129 _NC1130 sky130_fd_sc_hd__fill_8
+X298 _NC1131 _NC1132 _NC1133 _NC1134 sky130_fd_sc_hd__fill_8
+X299 _NC1135 _NC1136 _NC1137 _NC1138 sky130_fd_sc_hd__fill_1
+X300 _NC1139 _NC1140 _NC1141 _NC1142 sky130_fd_sc_hd__fill_4
+X301 _NC1143 _NC1144 _NC1145 _NC1146 sky130_fd_sc_hd__fill_1
+X302 _NC1147 _NC1148 _NC1149 _NC1150 sky130_fd_sc_hd__fill_2
+X303 _NC1151 _NC1152 _NC1153 _NC1154 sky130_fd_sc_hd__fill_1
+X304 _NC1155 _NC1156 _NC1157 _NC1158 sky130_fd_sc_hd__fill_1
+X305 _NC1159 _NC1160 _NC1161 _NC1162 sky130_fd_sc_hd__fill_2
+X306 _NC1163 _NC1164 _NC1165 _NC1166 sky130_fd_sc_hd__fill_8
+X307 _NC1167 _NC1168 _NC1169 _NC1170 sky130_fd_sc_hd__fill_8
+X308 _NC1171 _NC1172 _NC1173 _NC1174 sky130_fd_sc_hd__fill_8
+X309 _NC1175 _NC1176 _NC1177 _NC1178 sky130_fd_sc_hd__fill_8
+X310 _NC1179 _NC1180 _NC1181 _NC1182 sky130_fd_sc_hd__fill_1
+X311 _NC1183 _NC1184 _NC1185 _NC1186 sky130_fd_sc_hd__fill_8
+X312 _NC1187 _NC1188 _NC1189 _NC1190 sky130_fd_sc_hd__fill_4
+X313 _NC1191 _NC1192 _NC1193 _NC1194 sky130_fd_sc_hd__fill_8
+X314 _NC1195 _NC1196 _NC1197 _NC1198 sky130_fd_sc_hd__fill_1
+X315 _NC1199 _NC1200 _NC1201 _NC1202 sky130_fd_sc_hd__fill_4
+X316 _NC1203 _NC1204 _NC1205 _NC1206 sky130_fd_sc_hd__fill_1
+X317 _NC1207 _NC1208 _NC1209 _NC1210 sky130_fd_sc_hd__fill_2
+X318 _NC1211 _NC1212 _NC1213 _NC1214 sky130_fd_sc_hd__fill_4
+X319 _NC1215 _NC1216 _NC1217 _NC1218 sky130_fd_sc_hd__fill_8
+X320 _NC1219 _NC1220 _NC1221 _NC1222 sky130_fd_sc_hd__fill_2
+X321 _NC1223 _NC1224 _NC1225 _NC1226 sky130_fd_sc_hd__fill_8
+X322 _NC1227 _NC1228 _NC1229 _NC1230 sky130_fd_sc_hd__fill_8
+X323 _NC1231 _NC1232 _NC1233 _NC1234 sky130_fd_sc_hd__fill_2
+X324 _NC1235 _NC1236 _NC1237 _NC1238 sky130_fd_sc_hd__fill_4
+X325 _NC1239 _NC1240 _NC1241 _NC1242 sky130_fd_sc_hd__fill_8
+X326 _NC1243 _NC1244 _NC1245 _NC1246 sky130_fd_sc_hd__fill_1
+X327 _NC1247 _NC1248 _NC1249 _NC1250 sky130_fd_sc_hd__fill_2
+X328 _NC1251 _NC1252 _NC1253 _NC1254 sky130_fd_sc_hd__fill_1
+X329 _NC1255 _NC1256 _NC1257 _NC1258 sky130_fd_sc_hd__fill_4
+X330 _NC1259 _NC1260 _NC1261 _NC1262 sky130_fd_sc_hd__fill_8
+X331 _NC1263 _NC1264 _NC1265 _NC1266 sky130_fd_sc_hd__fill_8
+X332 _NC1267 _NC1268 _NC1269 _NC1270 sky130_fd_sc_hd__fill_8
+X333 _NC1271 _NC1272 _NC1273 _NC1274 sky130_fd_sc_hd__fill_8
+X334 _NC1275 _NC1276 _NC1277 _NC1278 sky130_fd_sc_hd__fill_1
+X335 _NC1279 _NC1280 _NC1281 _NC1282 sky130_fd_sc_hd__fill_4
+X336 _NC1283 _NC1284 _NC1285 _NC1286 sky130_fd_sc_hd__fill_2
+X337 _NC1287 _NC1288 _NC1289 _NC1290 sky130_fd_sc_hd__fill_4
+X338 _NC1291 _NC1292 _NC1293 _NC1294 sky130_fd_sc_hd__fill_8
+X339 _NC1295 _NC1296 _NC1297 _NC1298 sky130_fd_sc_hd__fill_8
+X340 _NC1299 _NC1300 _NC1301 _NC1302 sky130_fd_sc_hd__fill_8
+X341 _NC1303 _NC1304 _NC1305 _NC1306 sky130_fd_sc_hd__fill_4
+X342 _NC1307 _NC1308 _NC1309 _NC1310 sky130_fd_sc_hd__fill_8
+X343 _NC1311 _NC1312 _NC1313 _NC1314 sky130_fd_sc_hd__fill_8
+X344 _NC1315 _NC1316 _NC1317 _NC1318 sky130_fd_sc_hd__fill_2
+X345 _NC1319 _NC1320 _NC1321 _NC1322 sky130_fd_sc_hd__fill_8
+X346 _NC1323 _NC1324 _NC1325 _NC1326 sky130_fd_sc_hd__fill_1
+X347 _NC1327 _NC1328 _NC1329 _NC1330 sky130_fd_sc_hd__fill_2
+X348 _NC1331 _NC1332 _NC1333 _NC1334 sky130_fd_sc_hd__fill_2
+X349 _NC1335 _NC1336 _NC1337 _NC1338 sky130_fd_sc_hd__fill_2
+X350 _NC1339 _NC1340 _NC1341 _NC1342 sky130_fd_sc_hd__fill_8
+X351 _NC1343 _NC1344 _NC1345 _NC1346 sky130_fd_sc_hd__fill_1
+X352 _NC1347 _NC1348 _NC1349 _NC1350 sky130_fd_sc_hd__fill_2
+X353 _NC1351 _NC1352 _NC1353 _NC1354 sky130_fd_sc_hd__fill_4
+X354 _NC1355 _NC1356 _NC1357 _NC1358 sky130_fd_sc_hd__fill_8
+X355 _NC1359 _NC1360 _NC1361 _NC1362 sky130_fd_sc_hd__fill_2
+X356 _NC1363 _NC1364 _NC1365 _NC1366 sky130_fd_sc_hd__fill_1
+X357 _NC1367 _NC1368 _NC1369 _NC1370 sky130_fd_sc_hd__fill_4
+X358 _NC1371 _NC1372 _NC1373 _NC1374 sky130_fd_sc_hd__fill_8
+X359 _NC1375 _NC1376 _NC1377 _NC1378 sky130_fd_sc_hd__fill_8
+X360 _NC1379 _NC1380 _NC1381 _NC1382 sky130_fd_sc_hd__fill_8
+X361 _NC1383 _NC1384 _NC1385 _NC1386 sky130_fd_sc_hd__fill_1
+X362 _NC1387 _NC1388 _NC1389 _NC1390 sky130_fd_sc_hd__fill_1
+X363 _NC1391 _NC1392 _NC1393 _NC1394 sky130_fd_sc_hd__fill_4
+X364 _NC1395 _NC1396 _NC1397 _NC1398 sky130_fd_sc_hd__fill_1
+X365 _NC1399 _NC1400 _NC1401 _NC1402 sky130_fd_sc_hd__fill_4
+X366 _NC1403 _NC1404 _NC1405 _NC1406 sky130_fd_sc_hd__fill_1
+X367 _NC1407 _NC1408 _NC1409 _NC1410 sky130_fd_sc_hd__fill_2
+X368 _NC1411 _NC1412 _NC1413 _NC1414 sky130_fd_sc_hd__fill_8
+X369 _NC1415 _NC1416 _NC1417 _NC1418 sky130_fd_sc_hd__fill_2
+X370 _NC1419 _NC1420 _NC1421 _NC1422 sky130_fd_sc_hd__fill_8
+X371 _NC1423 _NC1424 _NC1425 _NC1426 sky130_fd_sc_hd__fill_8
+X372 _NC1427 _NC1428 _NC1429 _NC1430 sky130_fd_sc_hd__fill_2
+X373 _NC1431 _NC1432 _NC1433 _NC1434 sky130_fd_sc_hd__fill_8
+X374 _NC1435 _NC1436 _NC1437 _NC1438 sky130_fd_sc_hd__fill_2
+X375 _NC1439 _NC1440 _NC1441 _NC1442 sky130_fd_sc_hd__fill_8
+X376 _NC1443 _NC1444 _NC1445 _NC1446 sky130_fd_sc_hd__fill_8
+X377 _NC1447 _NC1448 _NC1449 _NC1450 sky130_fd_sc_hd__fill_1
+X378 _NC1451 _NC1452 _NC1453 _NC1454 sky130_fd_sc_hd__fill_8
+X379 _NC1455 _NC1456 _NC1457 _NC1458 sky130_fd_sc_hd__fill_8
+X380 _NC1459 _NC1460 _NC1461 _NC1462 sky130_fd_sc_hd__fill_8
+X381 _NC1463 _NC1464 _NC1465 _NC1466 sky130_fd_sc_hd__fill_2
+X382 _NC1467 _NC1468 _NC1469 _NC1470 sky130_fd_sc_hd__fill_1
+X383 _NC1471 _NC1472 _NC1473 _NC1474 sky130_fd_sc_hd__fill_2
+X384 _NC1475 _NC1476 _NC1477 _NC1478 sky130_fd_sc_hd__fill_1
+X385 _NC1479 _NC1480 _NC1481 _NC1482 sky130_fd_sc_hd__fill_2
+X386 _NC1483 _NC1484 _NC1485 _NC1486 sky130_fd_sc_hd__fill_4
+X387 _NC1487 _NC1488 _NC1489 _NC1490 sky130_fd_sc_hd__fill_8
+.ends apb_gpio

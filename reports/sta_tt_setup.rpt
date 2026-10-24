@@ -1,0 +1,61 @@
+Startpoint: PRESETn (input port clocked by PCLK)
+Endpoint: _096_ (recovery check against rising-edge clock PCLK)
+Path Group: asynchronous
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+            0.000    0.000    0.000   clock PCLK (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+                     2.000    2.000 ^ input external delay
+   0.058    0.000    0.000    2.000 ^ PRESETn (in)
+            0.000    0.000    2.000 ^ _096_/RESET_B (sky130_fd_sc_hd__dfrtp_1)
+                              2.000   data arrival time
+
+            0.000   10.000   10.000   clock PCLK (rise edge)
+                     0.000   10.000   clock network delay (ideal)
+                    -0.200    9.800   clock uncertainty
+                     0.000    9.800   clock reconvergence pessimism
+                              9.800 ^ _096_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                     0.228   10.028   library recovery time
+                             10.028   data required time
+---------------------------------------------------------------------------
+                             10.028   data required time
+                             -2.000   data arrival time
+---------------------------------------------------------------------------
+                              8.028   slack (MET)
+
+
+Startpoint: PADDR[4] (input port clocked by PCLK)
+Endpoint: PRDATA[0] (output port clocked by PCLK)
+Path Group: PCLK
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+            0.000    0.000    0.000   clock PCLK (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+                     2.000    2.000 v input external delay
+   0.009    0.000    0.000    2.000 v PADDR[4] (in)
+            0.000    0.000    2.000 v _041_/A (sky130_fd_sc_hd__nor4_1)
+   0.022    0.908    0.761    2.761 ^ _041_/Y (sky130_fd_sc_hd__nor4_1)
+            0.908    0.000    2.761 ^ _076_/A2 (sky130_fd_sc_hd__a22oi_1)
+   0.002    0.189    0.192    2.953 v _076_/Y (sky130_fd_sc_hd__a22oi_1)
+            0.189    0.000    2.953 v _077_/A2 (sky130_fd_sc_hd__a21oi_1)
+   0.000    0.083    0.146    3.099 ^ _077_/Y (sky130_fd_sc_hd__a21oi_1)
+            0.083    0.000    3.099 ^ PRDATA[0] (out)
+                              3.099   data arrival time
+
+            0.000   10.000   10.000   clock PCLK (rise edge)
+                     0.000   10.000   clock network delay (ideal)
+                    -0.200    9.800   clock uncertainty
+                     0.000    9.800   clock reconvergence pessimism
+                    -2.000    7.800   output external delay
+                              7.800   data required time
+---------------------------------------------------------------------------
+                              7.800   data required time
+                             -3.099   data arrival time
+---------------------------------------------------------------------------
+                              4.701   slack (MET)
+
+

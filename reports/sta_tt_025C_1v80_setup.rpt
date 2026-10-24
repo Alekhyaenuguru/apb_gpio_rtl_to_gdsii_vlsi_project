@@ -1,0 +1,39 @@
+Startpoint: PENABLE (input port clocked by PCLK)
+Endpoint: PRDATA[11] (output port clocked by PCLK)
+Path Group: PCLK
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+            0.000    0.000    0.000   clock PCLK (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+                     2.000    2.000 v input external delay
+   0.004    0.000    0.000    2.000 v PENABLE (in)
+            0.000    0.000    2.000 v _080_/B (sky130_fd_sc_hd__and2_1)
+   0.002    0.031    0.125    2.125 v _080_/X (sky130_fd_sc_hd__and2_1)
+            0.031    0.000    2.125 v _081_/A (sky130_fd_sc_hd__buf_2)
+   0.002    0.023    0.106    2.231 v _081_/X (sky130_fd_sc_hd__buf_2)
+            0.023    0.000    2.231 v _082_/B (sky130_fd_sc_hd__nand2b_1)
+   0.002    0.040    0.048    2.279 ^ _082_/Y (sky130_fd_sc_hd__nand2b_1)
+            0.040    0.000    2.279 ^ _083_/A (sky130_fd_sc_hd__buf_2)
+   0.035    0.174    0.198    2.476 ^ _083_/X (sky130_fd_sc_hd__buf_2)
+            0.174    0.000    2.476 ^ _084_/A (sky130_fd_sc_hd__buf_2)
+   0.046    0.229    0.280    2.756 ^ _084_/X (sky130_fd_sc_hd__buf_2)
+            0.229    0.000    2.756 ^ _094_/A (sky130_fd_sc_hd__nor2_2)
+   0.000    0.048    0.049    2.806 v _094_/Y (sky130_fd_sc_hd__nor2_2)
+            0.048    0.000    2.806 v PRDATA[11] (out)
+                              2.806   data arrival time
+
+            0.000   18.000   18.000   clock PCLK (rise edge)
+                     0.000   18.000   clock network delay (ideal)
+                    -0.200   17.800   clock uncertainty
+                     0.000   17.800   clock reconvergence pessimism
+                    -2.000   15.800   output external delay
+                             15.800   data required time
+---------------------------------------------------------------------------
+                             15.800   data required time
+                             -2.806   data arrival time
+---------------------------------------------------------------------------
+                             12.994   slack (MET)
+
+

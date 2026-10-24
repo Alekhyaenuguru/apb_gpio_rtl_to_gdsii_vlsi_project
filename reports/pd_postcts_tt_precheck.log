@@ -1,0 +1,24 @@
+OpenROAD 26Q2-1164-g08f67ee5ec 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+worst slack max 12.84
+worst slack min 0.38
+max_delay/setup group PCLK
+
+                                     Required  Actual
+Endpoint                               Delay   Delay   Slack
+------------------------------------------------------------
+PRDATA[4] (output)                     15.80    2.96   12.84 (MET)
+PRDATA[6] (output)                     15.80    2.95   12.85 (MET)
+PRDATA[2] (output)                     15.80    2.95   12.85 (MET)
+
+min_delay/hold group PCLK
+
+                                     Required  Actual
+Endpoint                               Delay   Delay   Slack
+------------------------------------------------------------
+_141_/D (sky130_fd_sc_hd__dfrtp_1)      0.40    0.78    0.38 (MET)
+_147_/D (sky130_fd_sc_hd__dfrtp_1)      0.40    0.78    0.38 (MET)
+_143_/D (sky130_fd_sc_hd__dfrtp_1)      0.40    0.79    0.38 (MET)
+

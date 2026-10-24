@@ -1,0 +1,32 @@
+Startpoint: _144_ (rising edge-triggered flip-flop clocked by PCLK)
+Endpoint: _144_ (rising edge-triggered flip-flop clocked by PCLK)
+Path Group: PCLK
+Path Type: min
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+            0.000    0.000    0.000   clock PCLK (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+            0.000    0.000    0.000 ^ _144_/CLK (sky130_fd_sc_hd__dfrtp_1)
+   0.004    0.050    0.260    0.260 ^ _144_/Q (sky130_fd_sc_hd__dfrtp_1)
+            0.050    0.000    0.260 ^ _126_/A0 (sky130_fd_sc_hd__mux2_1)
+   0.002    0.035    0.095    0.355 ^ _126_/X (sky130_fd_sc_hd__mux2_1)
+            0.035    0.000    0.355 ^ _127_/A (sky130_fd_sc_hd__buf_4)
+   0.002    0.019    0.073    0.428 ^ _127_/X (sky130_fd_sc_hd__buf_4)
+            0.019    0.000    0.428 ^ _144_/D (sky130_fd_sc_hd__dfrtp_1)
+                              0.428   data arrival time
+
+            0.000    0.000    0.000   clock PCLK (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+                     0.200    0.200   clock uncertainty
+                     0.000    0.200   clock reconvergence pessimism
+                              0.200 ^ _144_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                    -0.026    0.174   library hold time
+                              0.174   data required time
+---------------------------------------------------------------------------
+                              0.174   data required time
+                             -0.428   data arrival time
+---------------------------------------------------------------------------
+                              0.255   slack (MET)
+
+

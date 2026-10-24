@@ -1,0 +1,12 @@
+CORNER tt_025C_1v80
+worst slack max 12.80
+worst slack min 0.39
+tns max 0.00
+CORNER ff_n40C_1v65
+worst slack max 12.89
+worst slack min 0.30
+tns max 0.00
+CORNER ss_n40C_1v28
+worst slack max 2.56
+worst slack min 1.73
+tns max 0.00

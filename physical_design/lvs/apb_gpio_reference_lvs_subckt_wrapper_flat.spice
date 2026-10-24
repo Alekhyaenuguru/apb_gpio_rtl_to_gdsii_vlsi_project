@@ -1,0 +1,2 @@
+* flat transistor-level reference
+.include "/home/vsduser/APB_GPIO_VLSI/physical_design/lvs/apb_gpio_reference_lvs_subckt_flat.spice"

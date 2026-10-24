@@ -1,0 +1,58 @@
+Startpoint: PRESETn (input port clocked by PCLK)
+Endpoint: _096_ (removal check against rising-edge clock PCLK)
+Path Group: asynchronous
+Path Type: min
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+            0.000    0.000    0.000   clock PCLK (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+                     2.000    2.000 ^ input external delay
+   0.058    0.000    0.000    2.000 ^ PRESETn (in)
+            0.000    0.000    2.000 ^ _096_/RESET_B (sky130_fd_sc_hd__dfrtp_1)
+                              2.000   data arrival time
+
+            0.000    0.000    0.000   clock PCLK (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+                     0.200    0.200   clock uncertainty
+                     0.000    0.200   clock reconvergence pessimism
+                              0.200 ^ _096_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                     0.296    0.496   library removal time
+                              0.496   data required time
+---------------------------------------------------------------------------
+                              0.496   data required time
+                             -2.000   data arrival time
+---------------------------------------------------------------------------
+                              1.504   slack (MET)
+
+
+Startpoint: _100_ (rising edge-triggered flip-flop clocked by PCLK)
+Endpoint: _100_ (rising edge-triggered flip-flop clocked by PCLK)
+Path Group: PCLK
+Path Type: min
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+            0.000    0.000    0.000   clock PCLK (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+            0.000    0.000    0.000 ^ _100_/CLK (sky130_fd_sc_hd__dfrtp_1)
+   0.004    0.056    0.307    0.307 ^ _100_/Q (sky130_fd_sc_hd__dfrtp_1)
+            0.056    0.000    0.307 ^ _081_/A0 (sky130_fd_sc_hd__mux2_1)
+   0.002    0.037    0.112    0.419 ^ _081_/X (sky130_fd_sc_hd__mux2_1)
+            0.037    0.000    0.419 ^ _100_/D (sky130_fd_sc_hd__dfrtp_1)
+                              0.419   data arrival time
+
+            0.000    0.000    0.000   clock PCLK (rise edge)
+                     0.000    0.000   clock network delay (ideal)
+                     0.200    0.200   clock uncertainty
+                     0.000    0.200   clock reconvergence pessimism
+                              0.200 ^ _100_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                    -0.039    0.161   library hold time
+                              0.161   data required time
+---------------------------------------------------------------------------
+                              0.161   data required time
+                             -0.419   data arrival time
+---------------------------------------------------------------------------
+                              0.258   slack (MET)
+
+
