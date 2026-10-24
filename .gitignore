@@ -39,3 +39,7 @@ physical_design/lvs/lvs_consttest.log
 physical_design/lvs/lvs_deep_vgnd.log
 physical_design/lvs/lvs_powerfix_fresh.log
 physical_design/gds_out_powerfix_test.*
+
+# needed by the documented LVS command
+!physical_design/lvs/sky130_noimplicit_test.lvs
+!physical_design/lvs/apb_gpio_wrapper_noconb_test.spice
