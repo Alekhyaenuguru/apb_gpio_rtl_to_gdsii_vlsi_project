@@ -122,3 +122,22 @@ in the Signoff DRC section.
   `klayout -b -r physical_design/lvs/sky130_noimplicit_test.lvs -rd input=physical_design/gds/apb_gpio.gds -rd top_cell=apb_gpio -rd schematic=physical_design/lvs/apb_gpio_wrapper_noconb_test.spice -rd run_mode=flat -rd thr=6 -rd lvs_sub=VGND -rd convert_subckts=true -rd scale=true -rd schematic_simplify=true -rd report=<out>.lvsdb -rd target_netlist=<out>.cir`
 - Without `schematic_simplify=true` the same inputs report a mismatch.
 - The match depends on the two copy-level changes listed above: implicit connections disabled in the deck copy, and the unused `conb_1` (X98) removed from the reference.
+
+## Layout images
+
+Screenshots of each physical-design stage, generated from the ODB files in `physical_design/results/` and the final GDS.
+
+### Floorplan
+![Floorplan](images/01_floorplan.png)
+
+### Placement
+![Placement](images/02_place.png)
+
+### Clock tree synthesis
+![CTS](images/03_cts.png)
+
+### Routing
+![Routing](images/04_route.png)
+
+### Final layout (GDSII, viewed in KLayout)
+![Final GDS layout](images/final_layout_gds.png)
